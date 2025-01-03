@@ -45,9 +45,3 @@ The objectives of this task are:
 
 To run this project, clone the repository and navigate to the project directory:
 
-```bash
-git clone https://github.com/Selam46/Rossmann_Sales_Forecasting.git
-cd <project-directory>
-
-Install the required dependencies:
-pip install -r requirements.txt
