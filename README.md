@@ -1,50 +1,48 @@
-# Customer Purchasing Behavior Exploration
+# Rossmann Store Sales Prediction and Deployment
 
-This project explores customer purchasing behavior across various stores at **Rossmann Pharmaceuticals** through an exploratory data analysis (EDA). The goal is to analyze how factors such as promotions, competition, and holidays influence sales.
+This project focuses on predicting daily sales for Rossmann stores across multiple cities using machine learning and deploying the models for real-time usage. It covers data exploration, preprocessing, modeling, post-prediction analysis, and deployment-ready pipelines.
 
-## Project Overview
+---
 
-### Task 1: Exploration of Customer Purchasing Behavior
+## **Project Overview**
 
-The objectives of this task are:
+### **Goal**
+Forecast sales for Rossmann stores up to six weeks in advance, enabling better planning and decision-making.
 
-- **Data Cleaning:** Build pipelines to detect and handle outliers and missing data to ensure accurate analysis.
-- **Exploratory Data Analysis:** Visualize and analyze various features to uncover insights into customer behavior.
+### **Key Tasks**
+1. **Exploration of Customer Purchasing Behavior (Task 1)**:
+   - Perform Exploratory Data Analysis (EDA) to understand trends, patterns, and the impact of factors like promotions, holidays, and store types.
+   - Visualize insights for actionable recommendations.
 
-### Key Questions Explored
+2. **Prediction of Store Sales (Task 2)**:
+   - **Preprocessing (Task 2.1)**: Prepare the data with imputation, encoding, and scaling.
+   - **Model Building (Task 2.2)**: Use `RandomForestRegressor` with `sklearn` pipelines for modularity.
+   - **Loss Function (Task 2.3)**: Evaluate model performance with `Mean Absolute Error (MAE)`.
+   - **Post-Prediction Analysis (Task 2.4)**: Analyze feature importance and calculate confidence intervals.
+   - **Model Serialization (Task 2.5)**: Save models with timestamps for tracking.
 
-1. **Distribution Analysis:**
-   - Are promotions distributed similarly between training and test sets?
-  
-2. **Sales Behavior:**
-   - How do sales behave before, during, and after holidays?
-   - Are there seasonal purchase behaviors (e.g., Christmas, Easter)?
+3. **Deep Learning for Sales Prediction (Task 3)**:
+   - Build and evaluate an LSTM model for time series forecasting.
+   - Explore advanced techniques like autocorrelation and stationarity testing.
 
-3. **Correlation Analysis:**
-   - What is the correlation between sales and the number of customers?
-   - How do promotions affect sales? Are they attracting more customers?
 
-4. **Promo Deployment:**
-   - Which stores should promotions be deployed in for maximum effectiveness?
+---
 
-5. **Customer Behavior Trends:**
-   - Analyze customer behavior during store opening and closing times.
-   - How do weekdays affect weekend sales for stores open all week?
+## **How to Run the Project**
 
-6. **Assortment Type and Competitor Distance:**
-   - How does the assortment type affect sales?
-   - What impact does the distance to the nearest competitor have on sales?
-   - How do new competitors affect stores with previously unknown competitor distances?
+1. **Environment Setup**:
+   - Clone the repository and navigate to the project directory:
+     ```bash
+     git clone <repository_url>
+     cd <repository_folder>
+     ```
+   - Install dependencies:
+     ```bash
+     pip install -r requirements.txt
+     ```
 
-### Deliverables
-
-- An exploratory analysis notebook that answers all the questions using appropriate plots and summary tables.
-- Logging of all steps using the `logger` library in Python for traceability and reproducibility.
-
-## Getting Started
-
-To run this project, clone the repository and navigate to the project directory:
-
-```bash
-git clone <repository-url>
-cd <project-directory>
+2. **Run Notebooks**:
+   - Notebooks for each task are in the `notebooks/` directory. Open and execute them sequentially:
+     ```bash
+     jupyter notebook notebooks/<notebook_name>.ipynb
+     ```
